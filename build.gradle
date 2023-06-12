@@ -19,7 +19,7 @@ plugins {
     id "com.modrinth.minotaur" version "2.4.3" apply false
 
     // Java linter
-    id "checkstyle"
+//    id "checkstyle"
 }
 
 // Determine the version
@@ -50,7 +50,7 @@ subprojects {
     apply plugin: "dev.architectury.loom"
     // Apply checkstyle and ktlint to check the code style of every sub project
     apply plugin: "org.jlleitschuh.gradle.ktlint"
-    apply plugin: "checkstyle"
+//    apply plugin: "checkstyle"
     apply plugin: "org.jetbrains.kotlin.jvm"
     apply plugin: "io.github.juuxel.loom-quiltflower"
 
@@ -111,14 +111,14 @@ subprojects {
     }
 
     // configure checkstyle
-    checkstyle {
-        // configure to use checkstyle v8.41
-        toolVersion "8.45.1"
-        // Gradle should fail builds on checkstyle errors (not warnings)
-        ignoreFailures = true
-        // Checkstyle config file is in .checkstyle/checkstyle.xml
-        configFile = file("${rootDir}/.checkstyle/checkstyle.xml")
-    }
+//    checkstyle {
+//        // configure to use checkstyle v8.41
+//        toolVersion "8.45.1"
+//        // Gradle should fail builds on checkstyle errors (not warnings)
+//        ignoreFailures = true
+//        // Checkstyle config file is in .checkstyle/checkstyle.xml
+//        configFile = file("${rootDir}/.checkstyle/checkstyle.xml")
+//    }
 
     // configure checkstyle, but different
     // https://docs.gradle.org/current/userguide/checkstyle_plugin.html
